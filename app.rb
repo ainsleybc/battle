@@ -20,7 +20,7 @@ get '/play' do
 end
 
 get '/attacked' do
-  "p1 attacked p2!"
+  erb :attacked, { locals: { player_1: session[:player_1_name], player_2: session[:player_2_name] }}
 end
 
   run! if app_file == $0

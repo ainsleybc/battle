@@ -30,6 +30,6 @@ feature 'attacking player 2' do
   scenario 'attack & get confirmation' do
     sign_in_and_play
     click_button "attack_p2"
-    expect(page).to have_content "p1 attacked p2!"
+    expect(page).to have_content "Ainsley attacked Canace!"
   end
 end
