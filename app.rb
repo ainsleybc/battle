@@ -19,5 +19,9 @@ get '/play' do
     player_1_hp: 100,   player_2_hp: 100 } }
 end
 
+get '/attacked' do
+  "p1 attacked p2!"
+end
+
   run! if app_file == $0
 end
