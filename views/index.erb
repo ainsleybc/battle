@@ -1,13 +1,36 @@
-<h1>Battle!</h1>
-<h2>Sign in to play</h2>
-<form method="post" action="/names">
-  <label for="player_1_name">
-    Player 1 name
-   <input type="text" name="player_1_name">
-  </label>
-  <label for="player_2_name">
-    Player 2 name
-    <input type="text" name="player_2_name">
-  </label>
-  <input type="submit" value="submit">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Roboto" rel="stylesheet">
+	<title>Battle</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Battle!</h1>
+    </div>
+      <h2>Enter player names to start:</h2>
+      <div>
+        <form method="post" action="/names">
+          <ul>
+            <li>
+              <div>
+                <input type="text" name="player_1_name" placeholder="Player 1" required>
+              </div>
+            </li>
+            <li>
+            <p id="vs">vs.</p>
+            </li>
+            <li>
+              <div>
+                <input type="text" name="player_2_name" placeholder="Player 2" required>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <input type="submit" value="Fight!" id="submit">
+          </div>
+        </form>
+      </div>
+  </body>
+<html>
