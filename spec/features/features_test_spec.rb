@@ -12,17 +12,13 @@ end
 
 feature "starting a fight" do
   scenario "enter names on the home page, then see them on screen" do
-    visit("/")
-    # require 'launchy'; save_and_open_page
-    fill_in :player_1_name, with: "Ainsley"
-    fill_in :player_2_name, with: "Canace"
-    click_button "submit"
+    sign_in_and_play
     expect(page).to have_content("Ainsley","Canace")
   end
 
   feature "shows hit point" do
     scenario "redirected to /play" do
-      visit("/play")
+      sign_in_and_play
       player_1_hp, = 100
       player_2_hp = 100
       expect(page).to have_content("HP: #{player_1_hp}", "HP: #{player_2_hp}")
