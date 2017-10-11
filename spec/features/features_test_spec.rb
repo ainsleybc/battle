@@ -19,4 +19,13 @@ feature "starting a fight" do
     click_button "submit"
     expect(page).to have_content("Ainsley","Canace")
   end
+
+  feature "shows hit point" do
+    scenario "redirected to /play" do
+      visit("/play")
+      player_1_hp, = 100
+      player_2_hp = 100
+      expect(page).to have_content("HP: #{player_1_hp}", "HP: #{player_2_hp}")
+    end
+  end
 end

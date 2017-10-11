@@ -16,7 +16,8 @@ post '/names' do
 end
 
 get '/play' do
-  erb :play, { locals: { player_1: session[:player_1_name], player_2: session[:player_2_name] } }
+  erb :play, { locals: { player_1: session[:player_1_name], player_2: session[:player_2_name],
+    player_1_hp: 100,   player_2_hp: 100 } }
 end
 
   run! if app_file == $0
