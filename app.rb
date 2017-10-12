@@ -19,7 +19,8 @@ get '/play' do
     player_1_hp: 100,   player_2_hp: 100 } }
 end
 
-get '/attacked' do
+post '/attacked' do
+  $player_2.take_hit
   erb :attacked, { locals: { player_1_name: $player_1.name, player_2_name: $player_2.name }}
 end
 
