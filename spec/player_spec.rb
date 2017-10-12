@@ -1,9 +1,23 @@
 require 'player'
 
 describe Player do
-  subject(:player) { described_class.new('Lucy') }
+  subject(:player1) { described_class.new('Lucy') }
+  let(:player2) { described_class.new("Ainsley") }
 
   it 'returns its name' do
-    expect(player.name).to eq 'Lucy'
+    expect(player1.name).to eq 'Lucy'
+  end
+
+  it 'returns its hit points' do
+    expect(player1.hit_points).to eq Player::DEFAULT_HIT_POINTS
+  end
+
+  it 'takes a hit' do
+    expect{ player1.take_hit }.to change { player1.hit_points }.by -Player::DEFAULT_DAMAGE
+  end
+
+  it 'attacks a player' do
+    expect(player2).to receive(:take_hit)
+    player1.attack(player2)
   end
 end

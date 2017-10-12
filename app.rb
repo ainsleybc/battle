@@ -16,12 +16,12 @@ end
 
 get '/play' do
   erb :play, { locals: { player_1_name: $player_1.name, player_2_name: $player_2.name,
-    player_1_hp: 100,   player_2_hp: 100 } }
+    player_1_hp: $player_1.hit_points,   player_2_hp: $player_2.hit_points } }
 end
 
-post '/attacked' do
-  $player_2.take_hit
-  erb :attacked, { locals: { player_1_name: $player_1.name, player_2_name: $player_2.name }}
+get '/attack' do
+  $player_1.attack($player_2)
+  erb :attack, { locals: { player_1_name: $player_1.name, player_2_name: $player_2.name }}
 end
 
   run! if app_file == $0
