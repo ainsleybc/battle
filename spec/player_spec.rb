@@ -15,9 +15,4 @@ describe Player do
   it 'takes a hit' do
     expect{ player1.take_hit }.to change { player1.hit_points }.by -Player::DEFAULT_DAMAGE
   end
-
-  it 'attacks a player' do
-    expect(player2).to receive(:take_hit)
-    player1.attack(player2)
-  end
 end
