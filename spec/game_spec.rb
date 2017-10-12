@@ -3,8 +3,8 @@ require 'game'
 describe Game do
 
   subject(:game)  { described_class.new(player_1: player_1, player_2: player_2) }
-  let(:player_1)   { double :player }
-  let(:player_2)   { double :player }
+  let(:player_1)   { double :player, dead?: false }
+  let(:player_2)   { double :player, dead?: true }
 
   describe '#player_1' do
 
@@ -53,6 +53,15 @@ describe Game do
     it 'shows the player who is attacking' do
       expect(game.attacker).to eq player_1
     end
+
+  end
+
+  describe '#ended?' do
+
+    it 'determines whether a player has won the game' do
+      expect(game.ended?).to be_truthy
+    end
+
 
   end
 

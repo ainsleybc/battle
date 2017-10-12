@@ -27,7 +27,11 @@ end
 
 get '/switch-turns' do
   $game.switch_turn
-  redirect '/play'
+  $game.ended? ? redirect('/winner') : redirect('/play')
+end
+
+get '/winner' do
+  erb :winner, { locals: { game: $game } }
 end
 
   run! if app_file == $0

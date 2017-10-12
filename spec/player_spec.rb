@@ -15,4 +15,14 @@ describe Player do
   it 'takes a hit' do
     expect{ player1.take_hit }.to change { player1.hit_points }.by -Player::DEFAULT_DAMAGE
   end
+
+  describe '#dead?' do
+
+    it 'returns whether the player is dead' do
+      10.times { player1.take_hit }
+      expect(player1.dead?).to be_truthy
+    end
+
+  end
+
 end

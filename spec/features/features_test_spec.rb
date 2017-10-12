@@ -8,8 +8,17 @@ end
 feature "shows hit point" do
   scenario "redirected to /play" do
     sign_in_and_play
-    player_1_hp, = 100
-    player_2_hp = 100
-    expect(page).to have_content("HP: #{player_1_hp}", "HP: #{player_2_hp}")
+    expect(page).to have_content("HP: 100", "HP: 100")
+  end
+end
+
+feature 'shows who the winner is' do
+  scenario 'shows the winner once a players HP reaches 0' do
+    sign_in_and_play
+    19.times do 
+      click_button 'attack'
+      click_button 'ok'
+    end
+    expect(page).to have_content 'Ainsley wins!'
   end
 end

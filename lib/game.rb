@@ -26,6 +26,10 @@ class Game
     players.reverse!
   end
 
+  def ended?
+    player_1.dead? || player_2.dead?
+  end
+
   private
 
   attr_reader :players
