@@ -2,20 +2,31 @@ require 'game'
 
 describe Game do
 
-  subject(:game)  { described_class.new(player1: player1, player2: player2) }
-  let(:player1)   { double :player1 }
-  let(:player2)   { double :player2 }
+  subject(:game)  { described_class.new(player_1: player_1, player_2: player_2) }
+  let(:player_1)   { double :player }
+  let(:player_2)   { double :player }
 
-  it 'attacks a player' do
-    expect(player2).to receive(:take_hit)
-    game.attack(player2)
+  describe '#player_1' do
+
+    it 'has a player 1' do
+      expect(game.player_1).to eq player_1
+    end
+
+  end
+  
+  describe '#player_2' do
+
+    it 'has a player 2' do
+      expect(game.player_2).to eq player_2
+    end
+
   end
 
-  describe '#initialize' do
+  describe '#attack' do
 
-    it 'accepts two player instances' do
-      expect(game.player1).to eq player1
-      expect(game.player2).to eq player2
+    it 'attacks a player' do
+      expect(player_2).to receive(:take_hit)
+      game.attack(player_2)
     end
 
   end
