@@ -10,6 +10,14 @@ class Game
     @players = [@player_1, @player_2]
   end
 
+  def self.create_game(players)
+    @game = Game.new(players)
+  end
+
+  def self.current_game
+    @game
+  end
+
   def attack(player)
     player.take_hit
   end
