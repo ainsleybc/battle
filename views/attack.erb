@@ -1,2 +1,7 @@
-<h1><%= game.player_1.name %> attacked <%= game.player_2.name %>!</h1>
-<h2><%= game.player_2.name %> HP: <%= game.player_2.hit_points %>!</h2>
+<h1><%= game.attacker.name %> attacked <%= game.receiver.name %>!</h1>
+<h2>
+<h2><%= game.receiver.name %> HP: <%= game.receiver.hit_points %>!</h2>
+
+<form action="/switch-turns">
+  <input type="submit" value="ok">
+</form>

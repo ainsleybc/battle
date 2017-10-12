@@ -1,9 +1,3 @@
-require "capybara/rspec"
-require 'player'
-require_relative '../../app.rb'
-
-Capybara.app = Battle
-
 feature "starting a fight" do
   scenario "enter names on the home page, then see them on screen" do
     sign_in_and_play

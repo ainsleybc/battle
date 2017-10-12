@@ -1,5 +1,7 @@
 <h1><%= game.player_1.name %>HP: <%= game.player_1.hit_points%> vs <%= game.player_2.name %>HP:<%= game.player_2.hit_points%></h1>
 
 <form action="/attack">
-  <input type="submit" value="attack_p2">
+  <input type="submit" value="attack">
 </form>
+
+<h2> <%= game.attacker.name %>'s turn </h2>

@@ -13,7 +13,7 @@ describe Game do
     end
 
   end
-  
+
   describe '#player_2' do
 
     it 'has a player 2' do
@@ -27,6 +27,31 @@ describe Game do
     it 'attacks a player' do
       expect(player_2).to receive(:take_hit)
       game.attack(player_2)
+    end
+
+  end
+
+  describe '#switch turn' do
+
+    it 'changes players turn' do
+      game.switch_turn
+      expect(game.attacker).to eq player_2
+    end
+
+  end
+
+  describe '#receiver' do
+
+    it 'shows the player who is being attacked' do
+      expect(game.receiver).to eq player_2
+    end
+
+  end
+
+  describe '#attacker' do
+
+    it 'shows the player who is attacking' do
+      expect(game.attacker).to eq player_1
     end
 
   end
