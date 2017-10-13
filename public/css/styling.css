@@ -74,6 +74,7 @@ input[type="text"]:focus {
   text-decoration: none;
   font-size: 30px;
   outline: none;
+  overflow: none;
 }
 
 #round-button:hover {
@@ -94,6 +95,8 @@ input[type="text"]:focus {
 }
 
 #restart-link {
+  width: 120px;
+	height: 120px;
   border-radius: 50%;
   text-decoration: none;
   color: white;
@@ -114,29 +117,12 @@ input[type="text"]:focus {
   line-height: 120px;
 }
 
-/* 
-
-a {
-  display: inline-block;
-  overflow: none
+#attack-text {
+  font-size: 70px;
+  color: white;
+  letter-spacing: 0.05em
 }
 
-#restart {
-  padding: 10px;
-  margin: 10px;
-  overflow: none;
+#attack-hp {
+  font-size: 24px;
 }
-
-#restart-link {
-  margin: 10px;
-  border: 3px solid black;
-  border-radius: 50%;
-  width: 120px;
-	height: 120px;
-  padding: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  outline: none;
-  overflow: none;
-}  */
