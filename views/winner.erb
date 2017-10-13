@@ -1,1 +1,16 @@
-<h1> <%= game.receiver.name %> wins! </h1>
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="css/styling.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Roboto" rel="stylesheet">
+	<title>Battle-Start</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="winner"> <%= game.receiver.name %> wins! </h1>
+    </div>
+    <a href="http://localhost:9292" id="restart-link">
+      <div id="round-button">Play Again</div>
+    </a>
+  </body>
+</html>

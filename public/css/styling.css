@@ -52,7 +52,8 @@ input[type="text"] {
   color: #B4B4B4;
 }
 
-input[type="text"]:focus::-webkit-input-placeholder {         color:transparent; 
+input[type="text"]:focus::-webkit-input-placeholder {         
+  color:transparent; 
 }
 
 input[type="text"]:focus {
@@ -61,7 +62,7 @@ input[type="text"]:focus {
   border-color: #CB866D;
 }
 
-#submit {
+#round-button {
   background-color: #FEA788;
   color: white;
   border: 3px solid white;
@@ -75,14 +76,67 @@ input[type="text"]:focus {
   outline: none;
 }
 
-#submit:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-#submit:active {
-  transform: scale(1.1);
+#round-button:hover {
   background-color: white;
   color: #CB866D;
   border-color: #CB866D;
+  cursor: pointer;
 }
+
+#round-button:active {
+  transform: scale(1.1);
+}
+
+#winner {
+  font-size: 100px;
+  color: white;
+  letter-spacing: 0.05em
+}
+
+#restart-link {
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  overflow: none;
+}
+
+#restart-link:visited {
+  color: white;
+}
+
+#restart-link:active {
+  color: #CB866D;
+}
+
+#restart-link > #round-button {
+  font-size: 20px;
+  line-height: 120px;
+}
+
+/* 
+
+a {
+  display: inline-block;
+  overflow: none
+}
+
+#restart {
+  padding: 10px;
+  margin: 10px;
+  overflow: none;
+}
+
+#restart-link {
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 120px;
+	height: 120px;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  outline: none;
+  overflow: none;
+}  */
