@@ -1,8 +1,13 @@
 require 'player'
 
 describe Player do
+
   subject(:player1) { described_class.new('Lucy') }
   let(:player2) { described_class.new("Ainsley") }
+
+  before do
+    allow(player1).to receive(:rand) { Player::DEFAULT_DAMAGE }
+  end
 
   it 'returns its name' do
     expect(player1.name).to eq 'Lucy'

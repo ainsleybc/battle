@@ -11,7 +11,7 @@ class Player
   end
 
   def take_hit
-    @hit_points -= DEFAULT_DAMAGE
+    @hit_points -= rand(30)
   end
 
   def dead?

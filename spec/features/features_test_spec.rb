@@ -13,12 +13,15 @@ feature "shows hit point" do
 end
 
 feature 'shows who the winner is' do
+  
+  before { srand(1) }
+
   scenario 'shows the winner once a players HP reaches 0' do
     sign_in_and_play
-    19.times do 
+    18.times do 
       click_button 'attack'
       click_button 'ok'
     end
-    expect(page).to have_content 'Ainsley wins!'
+    expect(page).to have_content 'Lucy wins!'
   end
 end
