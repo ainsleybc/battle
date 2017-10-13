@@ -6,10 +6,10 @@
 	<title>Battle-Attack</title>
   </head>
   <body>
-    <h1 id="winner"><%= game.attacker.name %> attacked <%= game.receiver.name %>!</h1>
+    <h1 class="small-header"><%= game.attacker.name %> attacked <%= game.receiver.name %>!</h1>
     <h2 id="attack-hp"><%= game.receiver.name %>'s' HP: <%= game.receiver.hit_points %>!</h2>
     <form action="/switch-turns">
-      <input type="submit" value="ok" id="round-button">
+      <input type="submit" value="ok" class="round-button">
     </form>
   </body>
 </html>

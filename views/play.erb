@@ -1,7 +1,25 @@
-<h1><%= game.player_1.name %>HP: <%= game.player_1.hit_points%> vs <%= game.player_2.name %>HP:<%= game.player_2.hit_points%></h1>
-
-<form action="/attack">
-  <input type="submit" value="attack">
-</form>
-
-<h2> <%= game.attacker.name %>'s turn </h2>
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="css/styling.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Roboto" rel="stylesheet">
+	<title>Battle-Attack</title>
+  </head>
+  <body>
+    <ul>
+      <li id="player1">
+        <h1 class="header"><%= game.player_1.name %></h1><h2><br/>HP: <%= game.player_1.hit_points%></h2>
+      </li>
+      <li class = "vs">
+        <h1 class="header">vs.</h1><h2><br/>-</h2>
+      </li>
+      <li id="player2">
+        <h1 class="header"><%= game.player_2.name %></h1><h2><br/>HP:<%= game.player_2.hit_points%></h2>
+      </li>
+    </ul>
+    <h2 id="turn"> <%= game.attacker.name %>'s turn </h2> 
+    <form action="/attack">
+      <input type="submit" value="attack" class="round-button">
+    </form>
+  </body>
+</html>

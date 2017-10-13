@@ -6,7 +6,7 @@ body {
   background-color: #FEA788;
 }
 
-#header {
+.header {
   font-size: 50px;
   color: white;
   letter-spacing: 0.1em
@@ -18,6 +18,7 @@ h2 {
 }
 
 ul {
+  width: 100%;
 	line-height: 1.6;
 	list-style: none;
 	padding-left: 0;
@@ -26,14 +27,15 @@ ul {
 
 li {
 	display: inline-block;
-  margin: 10px;
+  margin: auto;
   padding: 0;
 }
 
-#vs {
+.vs {
   color: white;
   letter-spacing: 0.1em;
   font-size: 20px;
+  width: 10%;
 }
 
 input[type="text"] {
@@ -62,7 +64,7 @@ input[type="text"]:focus {
   border-color: #CB866D;
 }
 
-#round-button {
+.round-button {
   background-color: #FEA788;
   color: white;
   border: 3px solid white;
@@ -77,18 +79,18 @@ input[type="text"]:focus {
   overflow: none;
 }
 
-#round-button:hover {
+.round-button:hover {
   background-color: white;
   color: #CB866D;
   border-color: #CB866D;
   cursor: pointer;
 }
 
-#round-button:active {
+.round-button:active {
   transform: scale(1.1);
 }
 
-#winner {
+.small-header {
   font-size: 100px;
   color: white;
   letter-spacing: 0.05em
@@ -112,7 +114,7 @@ input[type="text"]:focus {
   color: #CB866D;
 }
 
-#restart-link > #round-button {
+#restart-link > .round-button {
   font-size: 20px;
   line-height: 120px;
 }
@@ -123,6 +125,23 @@ input[type="text"]:focus {
   letter-spacing: 0.05em
 }
 
-#attack-hp {
+#attack-hp, #turn {
   font-size: 24px;
 }
+
+#turn {
+  color: #CB866D;
+}
+
+#player1, #player2 {
+	width: 30%
+}
+
+#player1 {
+  text-align: right;
+}
+
+#player2 {
+  text-align: left;
+}
+
